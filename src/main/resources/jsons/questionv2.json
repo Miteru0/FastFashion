@@ -1,0 +1,17 @@
+[
+    {
+        "question": "Was ist am langlebesten?",
+        "rightClothingBarcode": "3",
+        "explanation": "Jeansstoff ist gut"
+    },
+    {
+        "question": "Scan T-Shirt",
+        "rightClothingBarcode": "1",
+        "explanation": "You didn't scan T-Shirt"
+    },
+    {
+        "question": "Scan Jeans",
+        "rightClothingBarcode": "3",
+        "explanation": "You didn't scan jeans"
+    }
+]

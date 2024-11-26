@@ -8,15 +8,15 @@ public enum Data {
 
     INSTANCE;
 
-    private HashMap<String, Clothing> clothes = new HashMap<>();
+    private HashMap<String, ClothingV1> clothes = new HashMap<>();
     private List<Challenge> challenges = new ArrayList<Challenge>();
 
-    public Clothing getClothing(String hashString) {
+    public ClothingV1 getClothing(String hashString) {
         if (clothes.containsKey(hashString)) {
             return clothes.get(hashString);
         }
         else {
-            return new Clothing("404", "not found", "src/main/resources/images/notFound.png", "-1");
+            return new ClothingV1("404", "not found", "src/main/resources/images/notFound.png", "-1");
         }
     }
 
@@ -34,7 +34,7 @@ public enum Data {
         challenges.add(challenge);
     }
 
-    public void addClothing(String hashString, Clothing clothing) {
+    public void addClothing(String hashString, ClothingV1 clothing) {
         clothes.put(hashString, clothing);
     }
 

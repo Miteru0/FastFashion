@@ -1,15 +1,15 @@
 package com.fastfashion;
 
-public class Clothing {
+public class ClothingV1 {
 
     private String name;
     private String description;
     private String imagePath;
     private String barcode;
 
-    public Clothing() {}
+    public ClothingV1() {}
 
-    public Clothing(String name, String description, String imagePath, String barcode) {
+    public ClothingV1(String name, String description, String imagePath, String barcode) {
         this.name = name;
         this.description = description;
         this.imagePath = imagePath;
