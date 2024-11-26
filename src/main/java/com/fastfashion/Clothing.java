@@ -5,11 +5,15 @@ public class Clothing {
     private String name;
     private String description;
     private String imagePath;
+    private String barcode;
 
-    public Clothing(String name, String description, String imagePath) {
+    public Clothing() {}
+
+    public Clothing(String name, String description, String imagePath, String barcode) {
         this.name = name;
         this.description = description;
         this.imagePath = imagePath;
+        this.barcode = barcode;
     }
 
     public String getName() {
@@ -22,6 +26,10 @@ public class Clothing {
 
     public String getImagePath(){
         return imagePath;
+    }
+
+    public String getBarcode() {
+        return barcode;
     }
 
     @Override

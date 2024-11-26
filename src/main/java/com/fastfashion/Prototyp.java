@@ -8,14 +8,16 @@ import java.awt.event.KeyListener;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.IOException;
+
 
 class Prototyp {
     public static void main(String[] args) throws Exception {
+
+        JsonDataImporter jds = new JsonDataImporter();
+        jds.ReadClothing("src/main/resources/jsons/clothes.json");
+        jds.ReadChallenge("src/main/resources/jsons/challenge.json");
+
         Data clothes = Data.INSTANCE;
-        clothes.addClothing("1", new Clothing("T-shirt", "xxl", "src/main/resources/images/tshirt.png"));
-        clothes.addClothing("2", new Clothing("Hose", "5xl", "src/main/resources/images/hose.png"));
-        clothes.addClothing("3", new Clothing("Coca Cola", "5l", "src/main/resources/images/cola.png"));
 
         JFrame frame = new JFrame("Barcode Scanner");
         JTextField barcodeField = new JTextField(20);
@@ -51,14 +53,8 @@ class Prototyp {
 
                 String scannedData = barcodeField.getText();
                 barcodeField.setText(clothes.getClothing(scannedData).toString());
-                BufferedImage picture = null;
-                try {
-                    picture = ImageIO.read(new File(clothes.getClothing(scannedData).getImagePath()));
-                } catch (IOException ex) {
-                    throw new RuntimeException(ex);
-                }
-
-                picLabel.setIcon(new ImageIcon(picture));
+                ImageIcon icon = new ImageIcon(clothes.getClothing(scannedData).getImagePath()); 
+                picLabel.setIcon(icon);
 
             }
         });
