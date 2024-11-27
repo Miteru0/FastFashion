@@ -68,7 +68,8 @@ public class App {
             public void keyReleased(KeyEvent e) {
                 String barcode = barcodeField.getText();
                 if (!questionAnswered) {
-                    scannedClothing.setText("you scanned " + clothes.get(barcode).getName());
+                    if (clothes.containsKey(barcode)) {
+                        scannedClothing.setText("you scanned " + clothes.get(barcode).getName());
                     image.setIcon(getImageIcon(clothes.get(barcode).getImagePath()));
                     if (curQuestion.isRight(barcode)) {
                         textPane.setText("you answered right!");
@@ -76,6 +77,7 @@ public class App {
                         textPane.setText(curQuestion.getExplanation());
                     }
                     questionAnswered = true;
+                    }
                 } else if (!questions.isEmpty() && barcode.equals("4")) {
                     image.setIcon(new ImageIcon(""));
                     scannedClothing.setText("");
