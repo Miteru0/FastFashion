@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <scp trust="true" password="pi4j" localFile="/home/miteru/Projects/FastFashion/FastFashion/target/${project.name}-1.0-SNAPSHOT.jar" remoteToFile="pi@192.168.116.194:/home/pi/jars/${project.name}.jar" verbose="true"/>
+  <sshexec trust="yes" password="pi4j" host="192.168.116.194" command="sh /home/pi/jars/start.sh" username="pi"/>
+</target>
+</project>

@@ -1,0 +1,18 @@
+[
+    {
+        "barcode": "1",
+        "name": "T-shirt",
+        "imagePath": "/images/tshirt.jpg"
+    },
+    {
+        "barcode": "2",
+        "name": "Hose",
+        "imagePath": "/images/pants.jpg"
+    },
+    {
+        "barcode": "3",
+        "name": "Jeans",
+        "imagePath": "/images/jeans.jpg"
+    }
+]
+
