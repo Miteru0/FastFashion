@@ -69,6 +69,10 @@
                         verbose="true" 
                         password="pi4j"
                         trust="true" />
+                        <!-- calls deploy script (not using for now)-->
+                        <!-- <sshexec host="192.168.116.194" trust="yes"
+                        username="pi" password="pi4j"
+                        command="sh /home/pi/jars/start.sh" /> -->
                         </target>
                     </configuration>
                 </execution>
